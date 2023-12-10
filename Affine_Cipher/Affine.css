@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-image: url('https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white; /* Set font color to white */
+}
+
+label {
+  color: white; /* Set font color to white */
+}
+
+textarea,
+input {
+  color: black; /* Set font color for input fields */
+}
+
+button {
+  color: white; /* Set font color to white */
+  background-color: #007bff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin: 10px 0;
+  font-weight: bold;
+  color: white; /* Set font color to white */
+}

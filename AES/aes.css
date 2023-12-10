@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Adjust background color and transparency */
+  border-radius: 10px;
+}
+
+h1 {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #333; /* Set font color */
+}
+
+label {
+  color: #333; /* Set font color */
+}
+
+input {
+  color: #333; /* Set font color */
+}
+
+button {
+  color: white;
+  background-color: #007bff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333; /* Set font color */
+  overflow-wrap: break-word; /* Ensure long words break */
+}

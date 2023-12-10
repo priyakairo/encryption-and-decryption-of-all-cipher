@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vigenère Cipher Encryption/Decryption</title>
+  <link rel="stylesheet" type="text/css" href="Veginere.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Vigenère Cipher <br>Encryption/Decryption</h1>
+    <label for="message">Enter a message:</label>
+    <textarea id="message" rows="4" cols="50"></textarea>
+    <br>
+    <label for="key">Enter a keyword:</label>
+    <input type="text" id="key">
+    <br>
+    <button onclick="encrypt()">Encrypt</button>
+    <button onclick="decrypt()">Decrypt</button>
+    <div id="result"></div>
+  </div>
+  
+  <script>
+    function encrypt() {
+      const message = document.getElementById("message").value.toUpperCase();
+      const key = document.getElementById("key").value.toUpperCase();
+      const encryptedMessage = vigenereEncrypt(message, key);
+      document.getElementById("result").textContent = `Encrypted Message: ${encryptedMessage}`;
+    }
+
+    function decrypt() {
+      const message = document.getElementById("message").value.toUpperCase();
+      const key = document.getElementById("key").value.toUpperCase();
+      const decryptedMessage = vigenereDecrypt(message, key);
+      document.getElementById("result").textContent = `Decrypted Message: ${decryptedMessage}`;
+    }
+
+    function vigenereEncrypt(plainText, key) {
+      let result = '';
+      for (let i = 0, j = 0; i < plainText.length; i++) {
+        const char = plainText[i];
+        if (char === ' ') {
+          result += ' ';
+          continue;
+        }
+
+        const charCode = char.charCodeAt(0);
+        const shift = key.charCodeAt(j % key.length) - 65;
+        const encryptedChar = String.fromCharCode(((charCode + shift - 65 + 26) % 26) + 65);
+        result += encryptedChar;
+        j++;
+      }
+      return result;
+    }
+
+    function vigenereDecrypt(cipherText, key) {
+      let result = '';
+      for (let i = 0, j = 0; i < cipherText.length; i++) {
+        const char = cipherText[i];
+        if (char === ' ') {
+          result += ' ';
+          continue;
+        }
+
+        const charCode = char.charCodeAt(0);
+        const shift = key.charCodeAt(j % key.length) - 65;
+        const decryptedChar = String.fromCharCode(((charCode - shift - 65 + 26) % 26) + 65);
+        result += decryptedChar;
+        j++;
+      }
+      return result;
+    }
+  </script>
+</body>
+</html>
+

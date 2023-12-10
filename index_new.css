@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.moving-title {
+    position:absolute;
+    animation: moveTitle 5s infinite alternate;
+}
+
+@keyframes moveTitle {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(50px, 50px);
+    }
+}
+
+.cipher-button {
+    display:block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color:palevioletred;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cipher-button:hover {
+    background-color: #0056b3;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('image/2.jpeg');
+    display: inline-block; /* Replace 'your-image.jpg' with your image file */
+    background-size:cover; /* Adjust as needed: cover, contain, etc. */
+    background-position: center;
+
+    color: #fff; /* Set text color for better contrast */
+}
+
+.container {
+    text-align: center;
+}
+
+.text {
+    font-size: 36px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background color for better text visibility */
+}
+
